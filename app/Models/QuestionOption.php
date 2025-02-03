@@ -9,6 +9,8 @@ class QuestionOption extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['text'];
+
     public function questions()
     {
         return $this->belongsToMany(Question::class, 'question_question_option');

@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\QuestionResource\Pages;
 use App\Filament\Resources\QuestionResource\RelationManagers;
+use App\Filament\Resources\QuestionResource\RelationManagers\OptionsRelationManager;
 use App\Models\Question;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -63,7 +64,7 @@ class QuestionResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            OptionsRelationManager::class,
         ];
     }
 

@@ -12,6 +12,6 @@ class Quiz extends Model
     protected $fillable = ['title'];
 
     public function questions() {
-        return $this->hasMany(Question::class);
+        return $this->belongsToMany(Question::class);
     }
 }
